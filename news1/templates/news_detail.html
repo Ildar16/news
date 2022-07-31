@@ -1,0 +1,11 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+New
+{% endblock title %}
+
+{% block content %}
+<h1>{{ news_detail.header }}</h1>
+{{ news_detail.creation_time|date:'d M Y' }}
+<br>{{ news_detail.a_or_n_text }}
+{% endblock content %}
