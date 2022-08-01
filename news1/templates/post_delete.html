@@ -1,0 +1,32 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+
+<h2>Вы действительно хотите удалить данный товар?</h2>
+
+<hr>
+       <table>
+           <tr>
+               <td>Заголовок</td>
+               <td>Дата публикации</td>
+               <td>Текст новости</td>
+           </tr>
+           {% for new in news %}
+           <tr>
+               <td>{{ new.header }}</td>
+               <td>{{ new.creation_time|date:'d M Y'  }}</td>
+               <td>{{ new.a_or_n_text|truncatechars:20|censor:'для' }}</td>
+           </tr>
+           {% endfor %}
+       </table>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="подтвердить"></form>
+{% endblock content %}
