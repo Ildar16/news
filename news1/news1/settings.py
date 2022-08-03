@@ -47,7 +47,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'sign',
     'protect',
+    'django_apscheduler',
 ]
+
+DEFAULT_FROM_EMAIL = 'ildark116@yandex.ru'
 
 SITE_ID = 1
 
@@ -80,7 +83,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #'news11.templatetags.custom_filters'
+                'django.template.context_processors.request',
+                # 'news11.templatetags.custom_filters'
             ],
         },
     },
@@ -135,7 +139,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -148,6 +152,16 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 ACCOUNT_FORMS = {'signup': 'sign.models.BasicSignupForm'}
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'ildark116'
+EMAIL_HOST_PASSWORD = 'vfvfvfvfv'
+EMAIL_USE_SSL = True
+SERVER_EMAIL = 'ildark116@yandex.ru'
+
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
+APSCHEDULER_RUN_NOW_TIMEOUT = 25

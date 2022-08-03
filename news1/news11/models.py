@@ -13,13 +13,14 @@ class Author(models.Model):
 
 class Category(models.Model):
     category_name = models.CharField(unique=True, max_length=255)
+    subscribers = models.ManyToManyField(User, through='CategorySubscribers')
 
     def __str__(self):
         return self.category_name.title()
 
 
 class Post(models.Model):
-    author = models.ForeignKey(to=Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
     article_or_news = models.BooleanField(default=True)
     creation_time = models.DateTimeField(auto_now_add=True)
     category = models.ManyToManyField(Category, through='PostCategory')
@@ -43,6 +44,14 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return f'/news/{self.id}'
+
+
+class CategorySubscribers(models.Model):
+    sub_categories = models.ForeignKey(Category, on_delete=models.CASCADE)
+    sub_users = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.sub_categories}, {self.sub_users}'
 
 
 class PostCategory(models.Model):
