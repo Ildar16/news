@@ -89,9 +89,9 @@ def add_subscribe(request, **kwargs):
 
 
 def sending_emails_to_subscribers(instance):
-    sub_text = instance.text
-    sub_title = instance.title
-    category = Category.objects.get(pk=Post.objects.get(pk=instance.pk).post_category.pk)
+    sub_text = instance.a_or_n_text
+    sub_title = instance.header
+    category = Category.objects.get(pk=Post.objects.get(pk=instance.pk).category.pk)
     subscribers = category.subscribers.all()
 
     for subscriber in subscribers:

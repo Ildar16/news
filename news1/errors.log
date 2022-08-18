@@ -1,0 +1,144 @@
+2022-08-18 19:36:04,101 ERROR Internal Server Error: /news/create/ /Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'Post' object has no attribute 'text'"), <traceback object at 0x10e9222c0>)
+Traceback (most recent call last):
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/forms/models.py", line 548, in save
+    self.instance.save()
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/db/models/base.py", line 872, in save_base
+    post_save.send(
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/ildar/Desktop/Lern/projects/new1/news1/news11/signals.py", line 13, in send_emails_on_signal
+    sending_emails_to_subscribers(instance)
+  File "/Users/ildar/Desktop/Lern/projects/new1/news1/news11/views.py", line 92, in sending_emails_to_subscribers
+    sub_text = instance.text
+AttributeError: 'Post' object has no attribute 'text'
+2022-08-18 19:36:04,254 ERROR "POST /news/create/ HTTP/1.1" 500 123748 /Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-08-18 19:41:00,526 ERROR Internal Server Error: /news/create/ /Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'Post' object has no attribute 'title'"), <traceback object at 0x106c16100>)
+Traceback (most recent call last):
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/forms/models.py", line 548, in save
+    self.instance.save()
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/db/models/base.py", line 872, in save_base
+    post_save.send(
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/ildar/Desktop/Lern/projects/new1/news1/news11/signals.py", line 13, in send_emails_on_signal
+    sending_emails_to_subscribers(instance)
+  File "/Users/ildar/Desktop/Lern/projects/new1/news1/news11/views.py", line 93, in sending_emails_to_subscribers
+    sub_title = instance.title
+AttributeError: 'Post' object has no attribute 'title'
+2022-08-18 19:41:00,549 ERROR "POST /news/create/ HTTP/1.1" 500 124009 /Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-08-18 19:41:45,071 ERROR Internal Server Error: /news/create/ /Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'Post' object has no attribute 'post_category'"), <traceback object at 0x1086a4b40>)
+Traceback (most recent call last):
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/forms/models.py", line 548, in save
+    self.instance.save()
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/db/models/base.py", line 872, in save_base
+    post_save.send(
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/ildar/Desktop/Lern/projects/new1/news1/news11/signals.py", line 13, in send_emails_on_signal
+    sending_emails_to_subscribers(instance)
+  File "/Users/ildar/Desktop/Lern/projects/new1/news1/news11/views.py", line 94, in sending_emails_to_subscribers
+    category = Category.objects.get(pk=Post.objects.get(pk=instance.pk).post_category.pk)
+AttributeError: 'Post' object has no attribute 'post_category'
+2022-08-18 19:41:45,089 ERROR "POST /news/create/ HTTP/1.1" 500 124197 /Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/servers/basehttp.py None
+2022-08-18 19:42:35,988 ERROR Internal Server Error: /news/create/ /Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/utils/log.py (<class 'AttributeError'>, AttributeError("'ManyRelatedManager' object has no attribute 'pk'"), <traceback object at 0x10c192bc0>)
+Traceback (most recent call last):
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/forms/models.py", line 548, in save
+    self.instance.save()
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/db/models/base.py", line 872, in save_base
+    post_save.send(
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/ildar/Desktop/Lern/projects/new1/news1/news11/signals.py", line 13, in send_emails_on_signal
+    sending_emails_to_subscribers(instance)
+  File "/Users/ildar/Desktop/Lern/projects/new1/news1/news11/views.py", line 94, in sending_emails_to_subscribers
+    category = Category.objects.get(pk=Post.objects.get(pk=instance.pk).category.pk)
+AttributeError: 'ManyRelatedManager' object has no attribute 'pk'
+2022-08-18 19:42:36,003 ERROR "POST /news/create/ HTTP/1.1" 500 124199 /Users/ildar/Desktop/Lern/projects/new1/venv1/lib/python3.10/site-packages/django/core/servers/basehttp.py None
